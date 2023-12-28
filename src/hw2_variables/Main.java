@@ -15,7 +15,6 @@ public class Main {
         int dog = 8;
         float cat = 3.6f;
         var paper = 763789;
-
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
@@ -87,8 +86,5 @@ public class Main {
 
         var totalOperatingHours = numberOfEmployees * oneEmployeeHours;
         System.out.println(" 2)Если в компании работает " + numberOfEmployees + " человек, то всего " + totalOperatingHours + " часов работы может быть поделено между сотрудниками");
-
-
     }
-
 }
