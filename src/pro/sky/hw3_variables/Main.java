@@ -1,4 +1,4 @@
-package hw3_variables;
+package pro.sky.hw3_variables;
 
 public class Main {
 
@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Значение переменной myFloat с типом float равно " + myFloat);
         System.out.println("Значение переменной myDouble с типом double равно " + myDouble);
         System.out.println("Значение переменной myChar с типом double равно " + myChar);
-        System.out.println("Значение переменной myChar с типом double равно " + myBoolean);
+        System.out.println("Значение переменной myBoolean с типом double равно " + myBoolean);
 
 //        Задача 2
         double a = 27.12;
@@ -112,7 +112,6 @@ public class Main {
         System.out.println("В среднем потребуется " + daysAverage + " дней для похудения на " + weightLossGoal + " кг");
 
         //Задача 8
-
         int mashaSalary = 67760;
         int denisSalary = 83690;
         int kristinaSalary = 76230;
@@ -131,6 +130,6 @@ public class Main {
 
         System.out.println("Маша теперь получает " + mashaNewSalary + " рублей. Годовой доход вырос на " + (mashaAnnualIncomeAfter - mashaAnnualIncomeBefore) + " рублей.");
         System.out.println("Денис теперь получает " + denisNewSalary + " рублей. Годовой доход вырос на " + (denisAnnualIncomeAfter - denisAnnualIncomeBefore) + " рублей.");
-        System.out.println("Кристина теперь получает " + kristinaNewSalary + " рублей. Годовой доход вырос на " + (kristinaAnnualIncomeAfter - kristinaAnnualIncomeBefore) + " рублей.");
+        System.out.printf("Кристина теперь получает %d рублей. Годовой доход вырос на %d рублей.", kristinaNewSalary, kristinaAnnualIncomeAfter - kristinaAnnualIncomeBefore);
     }
 }

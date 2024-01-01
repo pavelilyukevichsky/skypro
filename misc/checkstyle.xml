@@ -203,11 +203,11 @@
     <module name="RegexpOnFilename">
         <property name="id" value="testFileLocation"/>
         <property name="folderPattern" value="[\\/]src[\\/]test[\\/]java[\\/]"/>
-        <property name="fileNamePattern" value="^((\w+Test)|(\w+TestSupport)|(\w+Utils)|(\w+Matcher)|(Abstract\w+))\.java$"/>
+        <property name="fileNamePattern" value="^((\w+Test)|(\w+TestSupport)|(\w+Utils)|(Abstract\w+))\.java$"/>
         <property name="match" value="false"/>
         <message key="regexp.filename.mismatch"
             value="All files in the ''src/test/java'' folder
-                    should be named ''*Test.java'' or ''*TestSupport.java'' or ''*Utils.java'' or ''*Matcher.java'' or ''Abstract*.java''."/>
+                    should be named ''*Test.java'' or ''*Utils.java'' or ''Abstract*.java''."/>
     </module>
 
     <!-- Size Violations -->
@@ -296,10 +296,13 @@
         <!-- Class Design -->
         <module name="FinalClass"/>
         <module name="HideUtilityClassConstructor"/>
-        <!--  Suppress for any classes that contain method named "main"  -->
         <module name="SuppressionXpathSingleFilter">
             <property name="checks" value="HideUtilityClassConstructor"/>
-            <property name="query" value="//*[MODIFIERS//*[@text = 'UtilityClass' or @text='NoArgsConstructor' or @text='main' or @text = 'SpringBootApplication']]/descendant-or-self::node()"/>
+            <property name="query" value="//*[MODIFIERS//*[@text = 'UtilityClass' or @text='NoArgsConstructor' or @text = 'SpringBootApplication']]/descendant-or-self::node()"/>
+        </module>
+        <module name="SuppressionXpathSingleFilter">
+            <property name="checks" value="HideUtilityClassConstructor"/>
+            <property name="query" value="//*[CLASS_DEF//*[METHOD_DEF//*[@text='main']]]/*"/>
         </module>
         <module name="InnerTypeLast"/>
         <module name="InterfaceIsType"/>
