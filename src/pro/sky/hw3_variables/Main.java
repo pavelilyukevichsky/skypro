@@ -3,7 +3,32 @@ package pro.sky.hw3_variables;
 public class Main {
 
     public static void main(String[] args) {
-        //задача 1
+        task1();
+
+        task2();
+
+        task3();
+
+        task4();
+
+        System.out.println("--------");
+//        byte bb = 127;
+
+//        byte resultByte = (byte)(bb + 20);//[-128, 127]
+
+//        System.out.println(resultByte);
+
+        System.out.println("-------");
+        task5();
+
+        task6();
+
+        task7();
+
+        task8();
+    }
+
+    private static void task1() {
         int myInt = 10;
         byte myByte = 5;
         short myShort = 20;
@@ -24,18 +49,27 @@ public class Main {
         System.out.println("Значение переменной myDouble с типом double равно " + myDouble);
         System.out.println("Значение переменной myChar с типом double равно " + myChar);
         System.out.println("Значение переменной myBoolean с типом double равно " + myBoolean);
+    }
 
-//        Задача 2
-        double a = 27.12;
-        long b = 987678965549L;
-        float c = 2.786f;
-        int d = 569;
-        short e = 159;
-        long f = 27897;
-        byte g = 67;
+    private static void task2() {
+        double aa = 27.12;
+        System.out.println(aa);
+        long bb = 987678965549L;
+        System.out.println(bb);
+        float cc = 2.786f;
+        System.out.println(cc);
+        int dd = 569;
+        System.out.println(dd);
+        short ee = 159;
+        System.out.println(ee);
+        long ff = 27897;
+        System.out.println(ff);
+        byte gg = 67;
+        System.out.println(gg);
+    }
 
-//        Задача 3
-
+    private static void task3() {
+        //        Задача 3
         int studentsOfClass1 = 24;
         int studentsOfClass2 = 27;
         int studentsOfClass3 = 30;
@@ -47,9 +81,9 @@ public class Main {
         int sheetsPerStudent = totalSheets / totalStudents;
 
         System.out.println("На каждого ученика рассчитано " + sheetsPerStudent + " листов бумаги");
+    }
 
-//        Задача 4
-
+    private static void task4() {
         int bottlesPerMinute = 16;
         int minutesInDay = 24 * 60;
         int minutesIn3Days = 3 * minutesInDay;
@@ -60,20 +94,14 @@ public class Main {
         int bottlesIn3Days = bottlesPerMinute * minutesIn3Days;
         int bottlesInMonth = bottlesPerMinute * minutesInMonth;
 
-        System.out.println("За 20 минут машина произвела " + bottlesIn20Minutes + " штук бутылок");
-        System.out.println("За сутки машина производит " + bottlesInDay + " штук бутылок");
-        System.out.println("За 3 дня машина произвела " + bottlesIn3Days + " штук бутылок");
-        System.out.println("За месяц машина произвела " + bottlesInMonth + " штук бутылок");
+        String text = " штук бутылок";
+        System.out.println("За 20 минут машина произвела " + bottlesIn20Minutes + text);
+        System.out.println("За сутки машина производит " + bottlesInDay + text);
+        System.out.println("За 3 дня машина произвела " + bottlesIn3Days + text);
+        System.out.println("За месяц машина произвела " + bottlesInMonth + text);
+    }
 
-        System.out.println("-------");
-//        byte bb = 127;
-
-//        byte resultByte = (byte)(bb + 20);//[-128, 127]
-
-//        System.out.println(resultByte);
-
-        System.out.println("-------");
-        //Задача 5
+    private static void task5() {
         int totalCans = 120;
         int whiteCansPerClass = 2;
         int brownCansPerClass = 4;
@@ -83,9 +111,9 @@ public class Main {
         int totalBrownCans = totalClasses * brownCansPerClass;
 
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhiteCans + " банок белой краски и " + totalBrownCans + " банок коричневой краски");
+    }
 
-        //Задача 6
-
+    private static void task6() {
         int bananasCount = 5;
         int bananasWeight = 80;
         int milkVolume = 200;
@@ -97,21 +125,24 @@ public class Main {
         double totalWeightInKg = totalWeight / 1000.0;
 
         System.out.printf("Общий вес завтрака: %d грамм (%.2f кг)", totalWeight, totalWeightInKg);
+    }
 
-//Задача 7
-        int weightLossGoal = 7; // в килограммах
-        double dailyWeightLossLow = 0.25; // в килограммах
-        double dailyWeightLossHigh = 0.5; // в килограммах
-
-        int daysLow = (int) Math.ceil(weightLossGoal / dailyWeightLossLow); // округляем в большую сторону
-        int daysHigh = (int) Math.ceil(weightLossGoal / dailyWeightLossHigh); // округляем в большую сторону
+    private static void task7() {
+        int weightLossGoal = 7;
+        double dailyWeightLossLow = 0.25;
+        double dailyWeightLossHigh = 0.5;
+        // округляем в большую сторону
+        int daysLow = (int) Math.ceil(weightLossGoal / dailyWeightLossLow);
+        int daysHigh = (int) Math.ceil(weightLossGoal / dailyWeightLossHigh);
         int daysAverage = (daysLow + daysHigh) / 2;
 
-        System.out.println("Для похудения на " + weightLossGoal + " кг при потере веса " + dailyWeightLossLow + " кг в день нужно " + daysLow + " дней");
-        System.out.println("Для похудения на " + weightLossGoal + " кг при потере веса " + dailyWeightLossHigh + " кг в день нужно " + daysHigh + " дней");
+        String messageTemplate = "Для похудения на %d кг при потере веса %.2f кг в день нужно %d дней";
+        System.out.printf(messageTemplate, weightLossGoal, dailyWeightLossLow, daysLow);
+        System.out.printf(messageTemplate, weightLossGoal, dailyWeightLossHigh, daysHigh);
         System.out.println("В среднем потребуется " + daysAverage + " дней для похудения на " + weightLossGoal + " кг");
+    }
 
-        //Задача 8
+    private static void task8() {
         int mashaSalary = 67760;
         int denisSalary = 83690;
         int kristinaSalary = 76230;
@@ -128,8 +159,9 @@ public class Main {
         int denisAnnualIncomeAfter = denisNewSalary * 12;
         int kristinaAnnualIncomeAfter = kristinaNewSalary * 12;
 
-        System.out.println("Маша теперь получает " + mashaNewSalary + " рублей. Годовой доход вырос на " + (mashaAnnualIncomeAfter - mashaAnnualIncomeBefore) + " рублей.");
-        System.out.println("Денис теперь получает " + denisNewSalary + " рублей. Годовой доход вырос на " + (denisAnnualIncomeAfter - denisAnnualIncomeBefore) + " рублей.");
+        String messageTemplate = "%s теперь получает %d рублей. Годовой доход вырос на %d рублей.";
+        System.out.printf(messageTemplate, "Маша", mashaNewSalary, mashaAnnualIncomeAfter - mashaAnnualIncomeBefore);
+        System.out.printf(messageTemplate, "Денис", denisNewSalary, denisAnnualIncomeAfter - denisAnnualIncomeBefore);
         System.out.printf("Кристина теперь получает %d рублей. Годовой доход вырос на %d рублей.", kristinaNewSalary, kristinaAnnualIncomeAfter - kristinaAnnualIncomeBefore);
     }
 }

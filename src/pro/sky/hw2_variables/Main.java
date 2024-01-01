@@ -24,7 +24,8 @@ public class Main {
 
 //        Задача2
         dog = dog + 4;
-        cat += 4; //cat = cat + 4
+        // эквивалент записи cat += 4; cat = cat + 4
+        cat += 4;
         paper += 4;
 
 //        Задача3
@@ -64,21 +65,6 @@ public class Main {
         System.out.println(diff2Weight);
 
 //        Задача 8
-//        var workTime = 640;
-//        var timePerDay = 8;
-//
-//        int employeeCount = workTime / timePerDay;
-//
-//        System.out.println("«Всего работников в компании — " + employeeCount + " человек»");
-//        System.out.printf("«Всего работников в компании — %d человек»\n", employeeCount);
-//        System.out.println();
-//
-//        employeeCount += 20;
-//
-//        var newTimePerDay = workTime / employeeCount;
-
-//        System.out.printf("«Если в компании работает %d человек, то всего %d часов работы может быть поделено между сотрудниками»", employeeCount, newTimePerDay);
-
         System.out.println("Задача № 8");
         var allWorkHours = 640;
         var oneEmployeeHours = 8;
