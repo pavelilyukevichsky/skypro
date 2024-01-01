@@ -1,4 +1,4 @@
-package hw1;
+package pro.sky.hw1;
 
 public class Main {
 

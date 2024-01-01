@@ -1,11 +1,14 @@
-package hw2_variables;
+package pro.sky.hw2_variables;
 
 public class Main {
 
     public static void main(String[] args) {
-        short s = 4;
-        byte b = 3;
-        int result = s + b;
+        short myShort = 4;
+        byte myByte = 3;
+        int result = myShort + myByte;
+        System.out.println(result);
+
+        //Правила:
         //если у нас 1 double = double
         //если у нас 1 float, 2 не double = float
         //если у нас 1 int, 2 не double, float = int
@@ -21,7 +24,7 @@ public class Main {
 
 //        Задача2
         dog = dog + 4;
-        cat += 4;// cat = cat + 4
+        cat += 4; //cat = cat + 4
         paper += 4;
 
 //        Задача3
