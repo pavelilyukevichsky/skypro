@@ -32,7 +32,7 @@ public class Main {
         int d = 569;
         short e = 159;
         long f = 27897;
-        byte g = 67;
+        byte ggg = 67;
 
 //        Задача 3
 
