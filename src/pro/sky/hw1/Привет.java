@@ -17,6 +17,8 @@ public class Привет {
 
         System.out.println("7");
 
+        System.out.println("8");
+
 
     }
 
