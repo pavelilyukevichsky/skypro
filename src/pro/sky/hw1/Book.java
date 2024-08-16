@@ -18,12 +18,11 @@ public class Book {
         this.author = author;
     }
 
+
     void test() {
         String name = "sdf";
         System.out.println(author);
     }
-
-
 
     public int getYear() {
         return year;
