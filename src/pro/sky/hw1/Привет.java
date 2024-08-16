@@ -5,6 +5,7 @@ public class Привет {
     public static void main(String[] args) {
         Object myTest = new test();
 
+        System.out.println("1");
 
     }
 
