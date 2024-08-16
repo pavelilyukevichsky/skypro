@@ -6,6 +6,7 @@ public class Book {
     private int year;
     private Author author;
 
+
     private static int counter;
 
     public Book() {
